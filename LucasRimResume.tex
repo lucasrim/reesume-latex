@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{transparent}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-6px}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+\newcommand{\semitransp}[2][0.0]{{\transparent{#1}#2}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  \vspace{-4pt}
+  \color{gray}
+  \item
+  Last Updated on March 18th, 2024
+\end{flushright}
+
+\vspace{-36pt}
+
+\begin{flushleft}
+    \textbf{\Huge \scshape Lucas Rim} \\ \vspace{0pt}
+    \faIcon{home} 1360 N Laurel Ave, Apt 1, West Hollywood, CA, 90046 \\
+    \faIcon{phone} 816-456-4049 \\
+    \small
+    \faIcon{envelope}
+    \href{mailto:lucasrim@gmail.com}
+    {\underline{lucasrim@gmail.com}}
+    \faIcon{github}
+    \href{https://github.com/lucasrim}{\underline{github.com/lucasrim}} $  $
+    \faIcon{linkedin}
+    \href{https://linkedin.com/in/lucasrim}{\underline{linkedin.com/in/lucasrim}} $  $
+\end{flushleft}
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{JUUL Labs} $|$ \footnotesize\emph{Sr. Software Engineer}\vspace{8pt}}{April 2022 -- Feb. 2024}
+      {\small{JUUL's web store is responsible for tens of millions of dollars in transactions
+      annually. My team was responsible for subscriptions, excellent user experience,
+      while also deploying one of the leading age verification processes in the world.}}
+      \resumeItemListStart
+        \resumeItem{Managed transition from Selenium to Playwright test suite to lower flakiness in
+        our CI pipelines.}
+        \resumeItem{Upgraded several Rails Endpoints to conform to JSON:API v1.1 standards.}
+        \resumeItem{Deployed face capture technology using various vendors, tracking successful
+        age estimates for account creation and store access.}
+        \resumeItem{Deployed a new static support site for sunset regions for the JUUL store.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Guaranteed Rate}\vspace{8pt} $|$ \footnotesize\emph{Software Engineer}}{July 2020 -- March 2022}
+      \small{Guaranteed Rate had several internal services for their loan officers to serve their
+      customers, including offering a popular industry news bulletin/training platform.}
+      \resumeItemListStart
+        \resumeItem{Developed QA tools for loan officers to go through required process steps with
+        due dates to approve or deny mortgage applications.}
+        \resumeItem{Deployed training video page for Agent Advantage, a training tool for mortgage
+        officers to gain insights and industry news to improve their performance.}
+        \resumeItem{Led team to begin transition from our clojurescript/Re-agent frontend to a
+        modern TypeScript/React.js frontend.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Clearcover} $|$ \footnotesize\emph{Software Engineer}\vspace{8pt}}{Sept. 2018 -- July 2020}
+      {\small{Clearcover needed an easy to use, understandable, and elegant frontend to sell
+    one of the most complicated products in the world, insurance.}}
+      \resumeItemListStart
+        \resumeItem{Created and maintain the auto insurance policy selection form. Each option
+        would have complete scenario descriptions of when users would be covered,
+        and their limits. These differed on a state by state basis.}
+        \resumeItem{Created an automated testing with third-party partners using Puppeteer.js.}
+        \resumeItem{Maintained image service to generate PDFs and automate emails upon policy
+        binding.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Detective.io} $|$ \footnotesize\emph{Software Engineer}\vspace{8pt}}{July 2017 -- Sept. 2018}
+      {\small{Detective.io was a chrome extension to help automate several processes for
+      BDR/SDR teams. It would fetch data from a user's Salesforce prospect and
+      automatically search for insights on who to get into contact with.}}
+      \resumeItemListStart
+        \resumeItem{Designed user onboarding to highlight new features and familiarize users with
+        the platform.}
+        \resumeItem{Maintained Chrome extension in React for automating SDR/BDR workflows and
+        Salesforce integration.}
+        \resumeItem{Customized browser automation workflows to meet client demands.}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd 
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {College University}{June 2026}
+      {B.S. Computer Science}{Current GPA: 4.0/4.0}
+      
+    \resumeSubheading
+      {Little High School \footnotesize{(Dual Enrollment at Mission Community College)}}{June 2022}
+      {}{GPA: 4.44/4.0}
+
+    \vspace{-10pt}
+  \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     \textbf{Languages}{: C/C++, Python, Java, JavaScript/TypeScript, HTML/CSS, \LaTeX} \\
+     
+     \textbf{Tools}{: Git/GitHub, Unix Shell, Webpack, VS Code, IntelliJ CLion/PyCharm/IDEA, Atom}
+     
+     % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+     
+     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     
+    }}
+ \end{itemize}
+
+ \pagebreak
+% -------------------- TRANSPARENT --------------------
+ \semitransp{
+  Is this transparent
+ }
+\end{document}
